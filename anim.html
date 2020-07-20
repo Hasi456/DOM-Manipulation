@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM</title>
+
+	<script type="text/javascript">
+		
+			var margin=0;
+			function  walkboy(){
+			 var boyElement=document.getElementById("boy");
+			 
+			 	if(margin<=500){
+				boyElement.style.marginLeft=margin+"px";
+				margin+=5;
+
+				setTimeout("walkboy()",100);
+			}	
+			
+			}
+		
+		
+			var margin1=1000;
+			function  walkgirl(){
+			 var girlElement=document.getElementById("girl");
+			 
+			 	if(margin1>=600){
+				girlElement.style.marginRight=margin1+"px";
+				margin1-=5;
+
+				setTimeout("walkgirl()",100);
+			}	
+				
+			}
+			onload=walkgirl;
+		
+		onload=walkboy;
+
+		
+	</script>
+			
+		
+			
+
+
+
+</head>
+<body>
+	
+<img src="boy.gif" height="200px" onclick="walkboy()" id="boy">
+<img src="girl.gif" height="200px" onclick="walkgirl()" id="girl"/>
+
+</body>
+</html>
